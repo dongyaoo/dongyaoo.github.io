@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/D_32x32.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/D_16x16.svg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="1Xl4jOTB3--8mBq9dJaZypAU06UO9GQI27ZSzS8cjM0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.dongyaoo.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本文详细介绍了如何重装纯净的官方原版 windows 系统，对于 linux 系列系统也有参考意义。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手把手重装 windows 系统">
+<meta property="og:url" content="https://www.dongyaoo.com/29bb6eeb63ca.html">
+<meta property="og:site_name" content="东曜说">
+<meta property="og:description" content="本文详细介绍了如何重装纯净的官方原版 windows 系统，对于 linux 系列系统也有参考意义。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRMAs.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRqnS.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FPw5B.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FROSK.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRawa.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRB6C.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FR5DN.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRUkL.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRWpi.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRbYX.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRx5t.png">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRzKx.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRFSj.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRhwp.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FR1DY.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRn1U.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FR78v.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRexq.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRrpc.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRAfr.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRZBM.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRvKG.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FRy01.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHndr.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHdaX.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHVGx.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHYIj.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHlhp.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHset.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FH9tU.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHjjY.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FH6Wv.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FH8gq.jpg">
+<meta property="og:image" content="https://i.imgtg.com/2022/05/19/FHXsc.jpg">
+<meta property="article:published_time" content="2022-04-30T11:35:27.000Z">
+<meta property="article:modified_time" content="2022-07-24T09:27:06.240Z">
+<meta property="article:author" content="东曜">
+<meta property="article:tag" content="windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgtg.com/2022/05/19/FRMAs.png">
+
+<link rel="canonical" href="https://www.dongyaoo.com/29bb6eeb63ca.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>手把手重装 windows 系统 | 东曜说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-122HDJ222C"></script>
+    <script data-pjax>
+      var host = window.location.host;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      if (host.indexOf("127.0.0.1") == -1 && host.indexOf("localhost") == -1) {
+        gtag('js', new Date());
+        gtag('config', 'G-122HDJ222C');
+      }
+    </script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var host = window.location.host;
+      if (host.indexOf("127.0.0.1") == -1 && host.indexOf("localhost") == -1) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?dd2acff01230741bc4fadc86e42ecbc6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      }
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+<link rel="alternate" href="/atom.xml" title="东曜说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a target="_blank" rel="noopener" href="https://github.com/dongyaoo" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">东曜说</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.dongyaoo.com/29bb6eeb63ca.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="东曜">
+      <meta itemprop="description" content="Web 前端到全栈的升级之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="东曜说">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          手把手重装 windows 系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-30 19:35:27" itemprop="dateCreated datePublished" datetime="2022-04-30T19:35:27+08:00">2022-04-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-24 17:27:06" itemprop="dateModified" datetime="2022-07-24T17:27:06+08:00">2022-07-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+            <div class="post-description">本文详细介绍了如何重装纯净的官方原版 windows 系统，对于 linux 系列系统也有参考意义。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="说在前头"><a href="#说在前头" class="headerlink" title="说在前头"></a>说在前头</h4><p>笔者重装了一波<code>win10</code>系统，特此分享一下安装经验，请认真参考。</p>
+<p>笔者强烈不建议用百度或者知乎营销号推荐的系统一键重装工具，会给你绑定安装一系列的垃圾软件。另外，也不要去安装<code>Ghost</code>系统，这类系统是经过别人重做过的，非官方，稳定性和安全性不能保证，可能还乱弹广告。</p>
+<p>因为重装系统，无法截图，所以重启后电脑后的图片均为手机拍摄，见谅。</p>
+<h4 id="实验演示的设备"><a href="#实验演示的设备" class="headerlink" title="实验演示的设备"></a>实验演示的设备</h4><ul>
+<li><p>华硕<code>GL533VD</code>笔记本</p>
+</li>
+<li><p><code>32G</code>的<code>U</code>盘一个</p>
+</li>
+<li><p>微软原版<code>windows 10</code>系统消费者版（消费者版是一列版本的集合，覆盖专业版、家庭版等），笔者最后安装的<code>win10</code>专业版。</p>
+</li>
+</ul>
+<p>我选择重装系统的方式是通过<code>U</code>盘重装，原因在于<code>U</code>盘是纯离线、即插即拔的，十分方便。再者，当电脑文件损坏或者中病毒导致无法正常开机时，<code>U</code>盘就发挥了重要作用。</p>
+<h4 id="重装系统前的准备"><a href="#重装系统前的准备" class="headerlink" title="重装系统前的准备"></a>重装系统前的准备</h4><p>一般情况下重装系统都需要先格式化<code>C</code>盘，把旧系统删掉，然后将新系统安装在<code>C</code>盘。非<code>C</code>盘的文件除非自己选择，否则是不受影响的。因此，我们在重装系统前，先将<code>C</code>盘重要的数据文件进行备份迁移。例如下图所示的文件夹内的文件：</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRMAs.png" alt="FRMAs.png"></p>
+<p>安装在<code>C</code>盘的软件就随它格式化了吧，之后重新安装。</p>
+<h4 id="制作系统启动U盘"><a href="#制作系统启动U盘" class="headerlink" title="制作系统启动U盘"></a>制作系统启动U盘</h4><p>现在的<code>windows</code>系统大小一般都超过了<code>4G</code>，因此请准备一个<code>8G</code>起步的<code>U</code>盘作为系统启动<code>U</code>盘。</p>
+<p><code>Ventoy</code>是一个制作系统启动<code>U</code>盘的开源工具，其优点在于经过它制作后的<code>U</code>盘可以同时存放多个系统，包括<code>windows</code>系列的和<code>linux</code>系列的。我们首先进入<a target="_blank" rel="noopener" href="https://www.ventoy.net/cn/index.html">官网</a>，在下载页面中找到蓝奏云的链接，下载最新的版本。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRqnS.png" alt="FRqnS.png"></p>
+<p>下载到的是个压缩包，进入解压即可得到下图所示文件。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FPw5B.png" alt="FPw5B.png"></p>
+<p>这时，我们先插入<code>U</code>盘，再打开<code>Ventoy2Disk.exe</code>。如下图所示，红框代表<code>Ventoy</code>识别的设备（我演示用的<code>32</code>G<code>U</code>盘）。如果你的<code>U</code>盘已经做成了系统启动盘，那么红箭头所指的就是你<code>U</code>盘版本，如果是第一次做，这个红箭头的位置是空的，代表你的<code>U</code>盘尚未被格式化。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FROSK.png" alt="FROSK.png"></p>
+<p>我们第一次做启动盘，就点击<code>安装</code>，它会提示你是否格式化数据，同意即可。已经格式化过的就点击<code>升级</code>。安装完成后，系统启动<code>U</code>盘就制作完毕了。</p>
+<h4 id="准备系统镜像"><a href="#准备系统镜像" class="headerlink" title="准备系统镜像"></a>准备系统镜像</h4><p>我们进入<a target="_blank" rel="noopener" href="https://next.itellyou.cn/">MSDN的新站点</a>，下载所需的系统镜像文件。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRawa.png" alt="FRawa.png"></p>
+<p>下图所示的，即为<code>win10</code>消费者版的下载界面，复制<code>BT</code>链接后，打开迅雷即可创建一个下载任务。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRB6C.png" alt="FRB6C.png"></p>
+<p>下载完的文件是一个<code>ISO</code>后缀的系统镜像文件，将其复制到我们制作好的<code>U</code>盘（<code>Ventoy（G）</code>）中。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FR5DN.png" alt="FR5DN.png"></p>
+<h4 id="额外准备一手"><a href="#额外准备一手" class="headerlink" title="额外准备一手"></a>额外准备一手</h4><p>如果同学们没有采用官方的系统镜像或者安装老版本的系统，那么很可能安装后的系统中一个驱动也没有，而且处于断网状态。所以，我们首先下载一个驱动精灵万能网卡版（<code>exe</code>文件），不用安装，将其存入另一个<code>U</code>盘中备用，等安完系统了再根据情况是否需要安装这个软件。</p>
+<p>这个软件可以在重装系统后的离线状态下给你安装适合自己电脑型号的网卡驱动，之后就可以连上网了，再下载安装其他驱动就很方便了（比如继续通过驱动精灵或者鲁大师安装声卡、外设等驱动）。</p>
+<h4 id="U盘启动热键"><a href="#U盘启动热键" class="headerlink" title="U盘启动热键"></a>U盘启动热键</h4><p>由于电脑牌子的不同，<code>U</code>盘启动的快捷键也就不一样。下表列举了常见的各品牌电脑的快捷键，如果在该表中找不到自己对应的品牌，可以自行百度，百度不到可以参考表中的进行尝试。</p>
+<table>
+<thead>
+<tr>
+<th align="center">组装台式机</th>
+<th align="center">笔记本</th>
+<th align="center">品牌一体机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">华硕主板 F8</td>
+<td align="center">联想 F12</td>
+<td align="center">联想 F12</td>
+</tr>
+<tr>
+<td align="center">技嘉主板 F12</td>
+<td align="center">华硕 ESC</td>
+<td align="center">惠普 F12</td>
+</tr>
+<tr>
+<td align="center">微星主板 F11</td>
+<td align="center">宏基 F12</td>
+<td align="center">宏基 F12</td>
+</tr>
+<tr>
+<td align="center">映泰主板 F9</td>
+<td align="center">惠普 F9</td>
+<td align="center">戴尔 ESC</td>
+</tr>
+<tr>
+<td align="center">梅捷主板 ESC 或 F12</td>
+<td align="center">联想 Thinkpad F12</td>
+<td align="center">神舟 F12</td>
+</tr>
+<tr>
+<td align="center">七彩虹主板 ESC 或 F12</td>
+<td align="center">戴尔 F12</td>
+<td align="center">华硕 F8</td>
+</tr>
+<tr>
+<td align="center">华擎主板 F11</td>
+<td align="center">神舟 F12</td>
+<td align="center">方正 F12</td>
+</tr>
+<tr>
+<td align="center">斯巴达卡主板 ESC</td>
+<td align="center">三星 F12</td>
+<td align="center">清华同方 F12</td>
+</tr>
+<tr>
+<td align="center">昂达主板 F11</td>
+<td align="center">东芝 F12</td>
+<td align="center">海尔 F12</td>
+</tr>
+<tr>
+<td align="center">双敏主板 ESC</td>
+<td align="center">IBM F12</td>
+<td align="center">明基 F8</td>
+</tr>
+<tr>
+<td align="center">翔升主板 F10</td>
+<td align="center">海尔 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">精英主板 ESC或 F11</td>
+<td align="center">方正 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">冠盟主板 F11 或 F12</td>
+<td align="center">富士通 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">富士康主板 ESC 或 F12</td>
+<td align="center">清华同方 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">顶星主板 F11 或 F12</td>
+<td align="center">微星 F11</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">铭瑄主板 ESC</td>
+<td align="center">明基 F9</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">盈通主板 F8</td>
+<td align="center">技嘉 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">捷波主板 ESC</td>
+<td align="center">Gateway F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Inter 主板 F12</td>
+<td align="center">eMachines F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">杰微主板 ESC 或 F8</td>
+<td align="center">苹果 长按option建</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">致铭主板 F12</td>
+<td align="center">索尼 ESC</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">磐英主板 ESC</td>
+<td align="center">小米 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">磐正主板 ESC</td>
+<td align="center">华为 F12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">冠铭主板 F9</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="开搞"><a href="#开搞" class="headerlink" title="开搞"></a>开搞</h4><p>将<code>U</code>盘插入电脑的<code>USB</code>口，然后开机，进入下图的<code>logo</code>加载页面时，连续按从<code>U</code>盘启动的快捷键，笔者是疯狂按<code>ESC</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRUkL.jpg" alt="FRUkL.jpg"></p>
+<p>一般情况下会进入到下图所示的界面，让你选择<code>boot</code>服务（这个界面操作时忘拍了，下面这样图是网上的，清晰度堪忧，不过影响不大）。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRWpi.png" alt="FRWpi.png"></p>
+<p><code>boot</code>服务页面的第一项是原来的<code>C</code>盘的系统，第二项<code>UEFI</code>开头的代表<code>U</code>盘启动，第三项则是进入<code>BIOS</code>界面。直接选择第二项，回车。我们就会进入下图所示的<code>Ventoy</code>引导页面。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRbYX.jpg" alt="FRbYX.jpg"></p>
+<p>但是，笔者在选择<code>boot</code>服务页面回车<code>UEFI</code>后，出现<code>secure control</code>的报错，导致无法进入<code>Ventoy</code>的引导页。原因是华硕笔记本的安全控制，因为现在<code>Ventoy</code>制作的<code>U</code>盘启动属于传统的<code>MBR</code>设备，所以需要在<code>boot</code>菜单开启<code>CSM</code>支持。</p>
+<p>我们在上面这个页面，直接选择第三项<code>set up</code>。</p>
+<p>接着就到了设备的<code>BIOS</code>界面，下图所示的是华硕的<code>BIOS EZ</code>模式，简单说就是精简模式。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRx5t.png" alt="FRx5t.png"></p>
+<p>我们按<code>F7</code>进入<code>Advance</code>模式，就是高级模式，如下图所示。操控小键盘的上下左右按键可以移动，我们找到<code>Security</code>菜单下的<code>Secure Boot</code>，回车。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRzKx.jpg" alt="FRzKx.jpg"></p>
+<p>跳转到下图，将其中的<code>Secure Boot Control</code>字段改成<code>Disabled</code>，这个操作的意义就是关闭安全控制。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRFSj.jpg" alt="FRFSj.jpg"></p>
+<p>然后进入<code>Boot</code>菜单下，将<code>CSS Supoort</code>改为<code>Enabled</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRhwp.jpg" alt="FRhwp.jpg"></p>
+<p>改完后，按<code>F10</code>保存设置退出。这时，我们就会退回到选择<code>boot</code>服务的界面，找到<code>U</code>盘启动的选项回车，即可到<code>Ventoy</code>的引导页。</p>
+<p>在<code>Ventoy</code>引导页，我们可以看到自己在<code>U</code>盘中放的<code>ISO</code>镜像文件，选择自己想安装的系统，回车即可。接下来笔者在<code>logo</code>页等待片刻，即可跳转到下图。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FR1DY.jpg" alt="FR1DY.jpg"></p>
+<p>点击<code>下一页</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRn1U.jpg" alt="FRn1U.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FR78v.jpg" alt="FR78v.jpg"></p>
+<p>目前我们不需要产品密钥，直接点<code>我没有产品密钥</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRexq.jpg" alt="FRexq.jpg"></p>
+<p>下图我们选择专业版即可，点击<code>下一步</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRrpc.jpg" alt="FRrpc.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRAfr.jpg" alt="FRAfr.jpg"></p>
+<p>我们在下图选择<code>自定义安装</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRZBM.jpg" alt="FRZBM.jpg"></p>
+<p>下图所示的是电脑磁盘的分区，我电脑上有三个磁盘，驱动器<code>2</code>是我的<code>C</code>盘，是个256<code>G</code>的固态硬盘。点击格式化，把原<code>C</code>盘格掉，它会提示你数据都会被清除，确认即可。其他的驱动器你可以全格了，也可以保留。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRvKG.jpg" alt="FRvKG.jpg"></p>
+<p>格式化完后，选择你的<code>C</code>盘，点击<code>下一步</code>。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FRy01.jpg" alt="FRy01.jpg"></p>
+<p>接着就会跳转到安装界面，静待它完成。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHndr.jpg" alt="FHndr.jpg"></p>
+<p>完成后，系统会重启几次，接着就会出现下面一系列的图，进行初始化配置，大家可以参考我的。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHdaX.jpg" alt="FHdaX.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHVGx.jpg" alt="FHVGx.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHYIj.jpg" alt="FHYIj.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHlhp.jpg" alt="FHlhp.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHset.jpg" alt="FHset.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FH9tU.jpg" alt="FH9tU.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHjjY.jpg" alt="FHjjY.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FH6Wv.jpg" alt="FH6Wv.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FH8gq.jpg" alt="FH8gq.jpg"></p>
+<p><code>OK</code>，下图所示成功进入系统。</p>
+<p><img src="/images/loading.gif" data-original="https://i.imgtg.com/2022/05/19/FHXsc.jpg" alt="FHXsc.jpg"></p>
+
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">~~~~~~~~~~~~~~ 本文结束 <i class="fa fa-paw"></i> 感谢您的阅读 ~~~~~~~~~~~~~~</div>
+    
+</div>
+      </div>
+    
+        <div class="reward-container">
+  <div>原创不易，有幸帮助到您，不妨请作者喝杯奶茶 ~~</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.gif" data-original="/images/wechatpay.png" alt="东曜 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.gif" data-original="/images/alipay.png" alt="东曜 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>东曜
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.dongyaoo.com/29bb6eeb63ca.html" title="手把手重装 windows 系统">https://www.dongyaoo.com/29bb6eeb63ca.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"><i class="fa fa-tag"></i> windows</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/da38847430cf.html" rel="prev" title="搭建个人主页保姆级教程（六）">
+      <i class="fa fa-chevron-left"></i> 搭建个人主页保姆级教程（六）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/4c298c53de42.html" rel="next" title="一文看懂 react 架构">
+      一文看懂 react 架构 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81NjA5NS8zMjU1OA=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E5%9C%A8%E5%89%8D%E5%A4%B4"><span class="nav-text">说在前头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%BC%94%E7%A4%BA%E7%9A%84%E8%AE%BE%E5%A4%87"><span class="nav-text">实验演示的设备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-text">重装系统前的准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8U%E7%9B%98"><span class="nav-text">制作系统启动U盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F"><span class="nav-text">准备系统镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%9D%E5%A4%96%E5%87%86%E5%A4%87%E4%B8%80%E6%89%8B"><span class="nav-text">额外准备一手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U%E7%9B%98%E5%90%AF%E5%8A%A8%E7%83%AD%E9%94%AE"><span class="nav-text">U盘启动热键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E6%90%9E"><span class="nav-text">开搞</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="东曜"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">东曜</p>
+  <div class="site-description" itemprop="description">Web 前端到全栈的升级之路</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dongyaoo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dongyaoo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/dongyaoo_HIT" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;dongyaoo_HIT" rel="noopener" target="_blank"><i class="fa fa-lightbulb fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_41911142?type=blog" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41911142?type&#x3D;blog" rel="noopener" target="_blank"><i class="fa fa-bolt fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+      
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+          <h5 class="widget-title">标签云</h5>
+          <div id="myCanvasContainer" class="widget tagcloud">
+            <canvas width="250" height="250" id="resCanvas" style="width:100%">
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WEB%E5%90%8E%E7%AB%AF/" rel="tag">WEB后端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/YAML/" rel="tag">YAML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fiber/" rel="tag">fiber</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%8E%82%E7%BB%8F%E9%AA%8C/" rel="tag">大厂经验</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%87%92%E5%8A%A0%E8%BD%BD/" rel="tag">懒加载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%B6%E6%9E%84/" rel="tag">架构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%8C%E8%AF%8D/" rel="tag">歌词</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" rel="tag">静态博客</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E4%B9%90/" rel="tag">音乐</a><span class="tag-list-count">1</span></li></ul>
+            </canvas>
+          </div>
+        </div>
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">东曜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">21 分钟</span>
+</div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6259679c02c1d396" async="async"></script>
+  </div>
+  <div id="site-runtime">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-clock-o"></i>
+  </span>
+  <span id="runtime"></span>
+</div>
+
+<script language="javascript">
+  function isPC() {
+    var userAgentInfo = navigator.userAgent;
+    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+    for (var i = 0; i < agents.length; i++) {
+      if (userAgentInfo.indexOf(agents[i]) > 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function siteTime(openOnPC, start) {
+    window.setTimeout("siteTime(openOnPC, start)", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+      start = new Date("2022-04-15 13:13:00 +0800");
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    var diff = now - start;
+
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+
+    if (openOnPC) {
+        if (diffYears == 0){
+            document.getElementById("runtime").innerHTML = "本站已安全运行: " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        }else{
+            document.getElementById("runtime").innerHTML = "本站已安全运行: " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        }
+    } else {
+        if (y == 0){
+            document.getElementById("runtime").innerHTML = "本站已安全运行: " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+        }else{
+            document.getElementById("runtime").innerHTML = "本站已安全运行: " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+        }
+      
+    }
+  }
+
+  var showOnMobile = false;
+  var openOnPC = isPC();
+  var start = new Date();
+  siteTime(openOnPC, start);
+
+  if (!openOnPC && !showOnMobile) {
+    document.getElementById('site-runtime').style.display = 'none';
+  }
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='1' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+  <script data-pjax>
+  (function() {
+    var host = window.location.host;
+    if (host.indexOf("127.0.0.1") == -1 && host.indexOf("localhost") == -1) {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    }
+  })();
+  </script>
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+    </div>
+  <!-- aplayer -->
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+  <!-- 页面点击粒子特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script type="text/javascript" src="/js/cursor/clickExplosion.js"></script>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
